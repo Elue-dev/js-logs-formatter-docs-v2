@@ -1,8 +1,6 @@
 import { Callout } from 'nextra/components'
 
-
-
-# Customising Log Outputs
+## Customising Log Outputs
 
 To customise the logs, you can add a **helper text** to help you describe what kind of logs it is eg the type of data, as well as **colors** to style the logs according to your preferences, eg **red** for logging errors
 
@@ -12,7 +10,7 @@ To customise the logs, you can add a **helper text** to help you describe what k
 import { println } from "js-logs-formatter";
 ```
 
-We will be using the same sample data that was used in the [Basic Usage](usage#sample-data) section.
+We will be using the same sample data that was used in the [Basic Usage](../basic-usage#sample-data) section.
 
 ```typescript
 println({
@@ -29,6 +27,10 @@ This will print out the user data to the console and the logs will alsoinclude t
 <pre
   style={{
     color: "#00FF00",
+    whiteSpace: "pre-wrap", 
+    maxWidth: "100%",      
+    overflowWrap: "break-word", 
+    wordWrap: "break-word",  
   }}
 >
   User Data (called from function: yourFunctionName at line yourLineNumber)
@@ -109,7 +111,7 @@ try {
 
 
 
-<pre style={{ backgroundColor: "#FF6F6F", color: "#000000", marginTop: 10, padding: 10, borderRadius: 5 }}>
+<pre style={{ backgroundColor: "#FF6F6F", color: "#000000", marginTop: 30, padding: 10, borderRadius: 5 }}>
   {`
   loginUser error
   { 

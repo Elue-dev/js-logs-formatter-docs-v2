@@ -16,9 +16,12 @@ const config: DocsThemeConfig = {
     link: "https://github.com/Elue-dev/js-logs-formatter",
   },
   docsRepositoryBase: "https://github.com/Elue-dev/js-logs-formatter",
-  //   footer: {
-  //     text: "JS Logs Formatter",
-  //   },
+  footer: {
+    content: `JS Logs Formatter © ${new Date().getFullYear()}`,
+  },
+  editLink: {
+    content: () => null,
+  },
 };
 
 export default config;
