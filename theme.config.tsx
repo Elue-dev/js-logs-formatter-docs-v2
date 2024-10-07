@@ -1,5 +1,6 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
+import { useRouter } from "next/router";
 
 const config: DocsThemeConfig = {
   logo: (
@@ -21,6 +22,31 @@ const config: DocsThemeConfig = {
   },
   editLink: {
     content: () => null,
+  },
+
+  head: () => {
+    const pathToTitleMap: Record<string, string> = {
+      "/basic-usage": "Basic Usage",
+      "/advanced-usage/api-reference": "API Reference",
+      "/advanced-usage/customising-log-outputs": "Customising Log Outputs",
+      "/intro": "Introduction",
+      "/contributing": "Contributing",
+    };
+    const { asPath } = useRouter();
+
+    const title = pathToTitleMap[asPath]
+      ? `${pathToTitleMap[asPath]} – JS Logs Formatter`
+      : "JS Logs Formatter";
+
+    return (
+      <>
+        <title>{title}</title>
+        <meta
+          name="description"
+          content="Documentation for JS Logs Formatter"
+        />
+      </>
+    );
   },
 };
 

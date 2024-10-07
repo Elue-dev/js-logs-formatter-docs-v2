@@ -1,4 +1,4 @@
 export default {
-  "advanced-usage": "Customising Log Outputs",
+  "customising-log-outputs": "Customising Log Outputs",
   "api-reference": "API Reference",
 };
